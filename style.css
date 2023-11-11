@@ -1,0 +1,465 @@
+
+/* Importin Jakarta Fonts From Google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+/*Start Rooting Variables   */
+:root{
+    --jakarta-fonts:'Plus Jakarta Sans', sans-serif;
+    --heading-color-black:#030303;
+    --paragraph-color-grey:#7A746E;
+    --light-Creem:#FFF7F0;
+    --color-blue:#755CDE;
+    --color-light-orange:#F6A560;
+    --color-rose:#F39E9E;
+    --color-light-red:#EB7565;
+    --color-light-blue:#61C4B7;
+    --color-purple:#552049;
+}
+*,html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--light-Creem);
+    margin: 0;
+    padding: 0;
+}
+.heading-L{
+    color: var(--heading-color-black);
+    font-size: 56px;
+    font-weight: bold;
+    font-family: var(--jakarta-fonts);
+    line-height: 70px;
+}
+.heading-M{
+    color: var(--heading-color-black);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: var(--jakarta-fonts);
+    line-height: 51px;
+    
+}
+.heading-S{
+    color: var(--heading-color-black);
+    font-size: 32px;
+    font-weight: bold;
+    font-family: var(--jakarta-fonts);
+    line-height: 40px;
+}
+.heading-smal{
+    color: var(--light-Creem);
+    font-family:var(--jakarta-fonts);
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+}
+.paragraph{
+    color: var(--paragraph-color-grey);
+    font-size: 18px;
+    font-weight:normal;
+    font-family: var(--jakarta-fonts);
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.header-btn{
+    background-color: var(--heading-color-black);
+    color: var(--light-Creem);
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 28px;
+    cursor: pointer;
+}
+.header-btn:hover{
+    background-color: var(--color-blue);
+}
+.second-btn{
+    
+    background-color: var(--color-light-red);
+    color: var(--light-Creem);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.second-btn:hover{
+    background-color: var(--color-light-orange);
+}
+
+/* .arrow{
+    background-color: var(--heading-color-black) !important;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: var(--light-Creem);
+    cursor: pointer;
+} */
+/* .arrow:hover{
+    background-color: var(--color-blue) !important;
+} */
+
+
+/* <!------------- Start Rooting Variables ----------------------> */
+.container{
+    margin:  0 auto 88px auto;
+    width: 90%;
+    padding: 0px;
+}
+
+
+/*  <!------------- NavBar ---------------------->  */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav .logo img{
+    height: 64px;
+    width: 64px;
+}
+
+
+/* <!------------- Header ----------------------> */
+header{
+    text-align: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 6fr));
+    margin-bottom:80px !important;
+}
+.heading-H1{
+    grid-column: 1 / -1; 
+    margin-bottom: 23px;
+    
+}
+.heading-P{
+    grid-column: 2 / span  2;
+    align-items: center;
+}
+/* <!------------- Header's Media Query ----------------------> */
+
+/* Meduime Devices */
+@media (max-width:768px) {
+    header{
+        grid-template-columns: repeat(auto-fit, minmax(242, 6fr));
+        grid-template-columns: repeat(auto-fit, minmax(80px, 6fr));
+    }
+    
+    .heading-P{
+        grid-column: 2 /span 5;
+    }
+}
+
+
+
+
+/* <!------------- The Cards Section ----------------------> */
+section{
+    background-color: transparent;
+    margin-bottom: 88px;
+}
+
+.cards{
+    display: grid;
+    gap: 24px;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 6fr));
+    margin-bottom:136px !important;
+}
+
+
+.Graphic-Design{
+    background-color: var(--color-blue);
+    grid-column: 1 / span 2 ;
+    grid-row: 1 / span 2;
+}
+.UI-UX{
+    background-color: var(--color-light-orange);
+    grid-column:3 /span 1 ;
+}
+.Apps{
+    background-color: var(--color-rose);
+    grid-column: 4 /span 1;
+}
+.Photography{
+    background-color: var(--color-light-blue);
+    grid-column: 5 / span 2;
+    grid-row: 2/ 1;
+}
+.Illustrations{
+    background-color: var(--color-light-red);
+    grid-column: 3 / span 2;
+    grid-row: 2/span 1;
+}
+.Motion-Graphics{
+    background-color: var(--color-purple);
+    grid-column: 5 / span 2;
+}
+
+
+/* <-------------------- Cadr's Media Query ----------------------> */
+
+/* Meduime Devices */
+@media (max-width:768px) {
+    
+    .Photography{
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 3;
+    }
+    .Motion-Graphics{
+        grid-column: 3 / span 2;
+        grid-row: 3 / span 3;
+    }
+}
+
+
+/* small device 375px */
+@media (max-width:375px) {
+    .Graphic-Design{
+        grid-column: 1 / -1 ;
+    }
+    .UI-UX{
+        grid-column: 1  ;
+        grid-row: 3 / 4;
+    }
+    .Apps{
+        grid-column: 2 / -1;
+        grid-row: 3 / 4;
+    }
+    .Photography{
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+
+    .Illustrations{        
+        grid-column: 1 / -1;
+        grid-row:  5 / 6;
+    }
+    .Motion-Graphics{
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+
+    }
+}
+
+
+
+.item{
+    border: 0;
+    border-radius: 8px;
+    padding: 20px;
+    display: grid;
+    grid-row: 1fr 1fr;
+    justify-items: end;    
+    align-content:space-between;
+}
+
+.item-title {
+    justify-self: start;
+}
+.item  .item-image img{
+    width: fit-content;
+    object-fit: cover;
+    justify-self: end;
+}
+.item-title p{
+    margin: 0;
+    padding: 0;    
+    
+}
+
+
+/* <!------------- About Amy  ----------------------> */
+
+.about-amy{
+    display: grid;
+    gap: 125px;
+    grid-template-columns:repeat(auto-fit, minmax( 445px , 1fr));
+    align-items: center;
+    justify-items: end;
+}
+
+.amy-image img{
+    width: 100%;
+}
+.section-about-amy{
+    display: grid;
+    gap: 34px;
+}
+.section-about-amy button{
+    justify-self: start;
+}
+
+
+/* <!------------- The Sectin Of Amy's Media Query  ----------------------> */
+/* Meduime Devices */
+@media (max-width:768px) {
+    .about-amy{
+        gap: 41px;
+        row-gap: 0;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+        
+    .amy-image {
+        grid-row: 1 / 2;
+        width:125%;
+        position: relative; 
+    }
+    .section-about-amy{
+        row-gap: 24px;
+    }
+}
+
+
+/* small device 375px */
+@media (max-width:375px) {
+    .about-amy{
+        grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+        justify-content: center;
+        text-align: center;
+    }
+    .section-about-amy button{
+        justify-self: center;
+    }
+    .section-about-amy{
+        row-gap: 24px;
+    }
+    .amy-image{
+        width: auto;
+    }
+}
+
+
+
+
+/* <!------------- Projects ----------------------> */
+.Project h3 {
+    text-align: center;
+}
+
+.Project .carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    margin: 56px 0;
+}
+
+.Project .carousel img {
+    width: 440px;
+    height: 320px;
+    border: 0;
+    border-radius: 8px;
+}
+
+
+.Project .arrow {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Project .arrow img {
+    width: 55px;
+    height: 50px;
+    background-color: black;
+    padding: 19px;
+    transition: .5s ease;
+    border-radius: 50%;
+}
+
+.Project .arrow img:hover {
+    background-color: var(--color-blue);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* <!------------- CTA ----------------------> */
+.CTA{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 48px 0px;
+    gap: 182px;
+    background-color: var(--heading-color-black);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+}
+.take_Action{
+    display: grid;
+    padding: 0 24px;
+    row-gap: 24px;
+}
+.take_Action h3{
+    color: var(--light-Creem);
+}
+.CTA button{
+    justify-self:center
+}
+
+/* <!------------- CTA's Media Query ----------------------> */
+/* Meduime Devices */
+@media (max-width:768px) {
+    .CTA{
+        text-align: center;
+        row-gap: 26px;
+        
+        padding: 56px 0;
+    }
+}
+
+
+/* small device 375px */
+@media (max-width:375px) {
+    .CTA{
+        text-align: center;
+        row-gap: 24px;
+    }
+
+.take_Action h3{
+    font-size: 26px;
+    color: var(--light-Creem);
+    justify-content: center;
+}
+.take_Action p{
+    font-size: 16px;
+}
+.CTA button{
+    justify-self:center
+}
+}
+
+
+
+/* <!------------- Footer ----------------------> */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:0 !important;
+}
